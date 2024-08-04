@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+  int a[20],i,temp,n,val;
+  printf("enter how many number you want:");
+  scanf("%d",&n);
+  for(i=0;i<n;i++){
+      scanf("%d",&a[i]);
+  }
+  printf("enter the value you found");
+  scanf("%d",&val);
+  for(i=0;i<n;i++){
+    //  printf("%d\n",a[i]);
+    if(a[i]==val){
+        temp=val;
+        break;
+    }
+  }
+  if(temp==val){
+      printf("value presence in array");
+  }
+  else
+  {
+      printf("value not presence in array");
+      
+  }
+      return 0;
+}
