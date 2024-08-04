@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+   int top,n,i,val,s;
+  printf("enter the size of array:\n");
+  scanf("%d",&n);
+  int a[n];
+  printf("enter how many element you want to add in stack:");
+  scanf("%d",&s);
+  top=s-1;
+  for(i=0;i<s;i++){
+      scanf("%d",&a[i]);
+  }
+//   for(i=0;i<s;i++){
+//      printf("%d\n",a[i]);
+//   }
+if(top==-1){
+    printf("stack underflow");
+}
+else{
+   top=top-1;
+    for(i=0;i<=top;i++){
+     printf("%d\n",a[i]);
+  }
+}
+return 0;
+}
