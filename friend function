@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class abc;
+class xyz{
+    int a,b;
+    public:
+    void set(int x,int y){
+        a=x;
+        b=y;
+    }
+    friend void max(xyz m,abc n);
+    
+};
+class abc{
+    int a1,b1;
+    public:
+    void set(int x,int y){
+        a1=x;
+        b1=y;
+    }
+    friend void max(xyz m,abc n);
+};
+void max(xyz m,abc n){
+   int a,b,s;
+   a=m.a;
+   b=m.b;
+   s=a+b;
+   cout<<s;
+}
+int main() {
+   xyz x;
+   x.set(10,20);
+   abc a;
+   a.set(20,30);
+   max(x,a);
+    return 0;
+}
