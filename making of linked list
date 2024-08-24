@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node *ptr;
+};
+void printlist(struct node *p){
+    while(p!=NULL){
+        printf("%d\t",p->data);
+        p=p->ptr;
+    }
+};
+int main() {
+   struct node *a=NULL,*b=NULL,*c=NULL,*h;
+  a=(struct node*)malloc(sizeof(struct node));
+  b=(struct node*)malloc(sizeof(struct node));
+  c=(struct node*)malloc(sizeof(struct node));
+   a->data=10;
+   b->data=20;
+   c->data=30;
+   a->ptr=b;
+   b->ptr=c;
+   c->ptr=NULL;
+   h=a;
+   printlist(h);
+    return 0;
+}
