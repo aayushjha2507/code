@@ -22,8 +22,12 @@ void divi(abc x){
 }
 int main() {
    abc a;
-   a.set(100,200);
+   int x,y;
+   cout<<"Enter the first no"<<endl;
+   cin>>x;
+   cout<<"Enter the second no"<<endl;
+   cin>>y;
+   a.set(x,y);
    divi(a);
     return 0;
-    }
 }
