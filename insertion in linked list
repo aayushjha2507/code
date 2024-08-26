@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node *next;
+};
+struct node *insertion(struct node *start){
+    int value;
+    printf("Enter the value you want to add\n");
+    scanf("%d",&value);
+    struct node *avail;
+    avail=(struct node*)malloc(sizeof(struct node));
+    avail->data=value;
+    avail->next=start;
+    start=avail;
+    return start;
+}
+void printvalue(struct node *p){
+    while(p!=NULL){
+        printf("%d\n",p->data);
+        p=p->next;
+    }
+}
+int main() {
+  struct node *one=NULL,*two=NULL,*three=NULL,*head;
+  one=(struct node*)malloc(sizeof(struct node));
+ two=(struct node*)malloc(sizeof(struct node));
+  three=(struct node*)malloc(sizeof(struct node));
+  one->data=10;
+  two->data=20;
+  three->data=30;
+  one->next=two;
+  two->next=three;
+  three->next=NULL;
+  head=one;
+  printvalue(head);
+  head=insertion(head);
+  printf("%d\n",head);
+    printvalue(head);
+  return 0;
+}
