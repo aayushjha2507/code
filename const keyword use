@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+class abc{
+    int x;
+    public:
+    void set(int a){
+        x=a;
+    }
+    void get()const{
+        cout<<x;
+    }
+};
+int main(){
+    abc s;
+    s.set(20);
+    s.get();
+}
