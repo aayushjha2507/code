@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class abc{
+    int a,b;
+    public:
+    void set(int x,int y){
+        a=x;
+        b=y;
+    }
+    friend class xyz;
+};
+class xyz{
+    public:
+    void get(abc a1){
+        cout<<a1.a<endl;
+        cout<<a1.b;
+    }
+};
+int main() {
+    abc ab;
+    xyz xy;
+    ab.set(10,20);
+    xy.get(ab);
+    return 0;
+}
