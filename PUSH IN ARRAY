@@ -7,7 +7,7 @@ int main() {
   printf("enter how many element you want to add in array:");
   scanf("%d",&s);
    top=s;
-   if(top>n){
+   if(top>=n){
     printf("stack overflow");
 }
 else{
