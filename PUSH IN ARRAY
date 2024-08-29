@@ -6,22 +6,22 @@ int main() {
   int a[n];
   printf("enter how many element you want to add in array:");
   scanf("%d",&s);
-  for(i=0;i<s;i++){
-      scanf("%d",&a[i]);
-  }
-  top=s;
-  printf("enter the value you add at top of the stack:");
-  scanf("%d",&val);
-if(top>n){
+   top=s;
+   if(top>n){
     printf("stack overflow");
 }
 else{
+  for(i=0;i<s;i++){
+      scanf("%d",&a[i]);
+  }
+  printf("enter the value you add at top of the stack:");
+  scanf("%d",&val);
     top=s-1;
     top=top+1;
     a[top]=val;
     for(i=0;i<=top;i++){
      printf("%d\n",a[i]);
-  }
+    }
 }
 
     return 0;
