@@ -1,0 +1,36 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class TIME{
+    public:
+    int h,m,s;
+    TIME(){}
+    TIME(int h,int m,int s){
+        this->h=h;
+        this->m=m;
+        this->s=s;
+    }
+    void display(){
+     cout<<h<<":"<<m<<":"<<s<<endl;
+    }
+    void sum(TIME t1,TIME t2){
+        int hour,min,sec;
+        hour=t1.h+t2.h;
+        min=t1.m+t2.m;
+        sec=t1.s+t2.s;
+        cout<<"NOW THE SUM IS"<<endl;
+        cout<<hour<<":"<<min<<":"<<sec;
+    }
+};
+int main() {
+   
+    TIME t1(10,20,30);
+    t1.display();
+     
+    TIME t2(20,20,20);
+    t2.display();
+    TIME t3;
+    t3.sum(t1,t2);
+    
+    
+}
