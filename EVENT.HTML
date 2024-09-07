@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    .header li {
+      list-style: none;
+    }
+
+    .header li a {
+      text-decoration: none;
+      color: black;
+      font-family: "Anton", sans-serif;
+      font-weight: 400;
+      color: green;
+      font-size: 30px;
+      ;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-around;
+      border: 2px solid black;
+      border-radius: 20px;
+      box-shadow: 15px 15px 10px black;
+      backdrop-filter: blur(10px);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    .body h1 {
+      text-align: center;
+      text-shadow: 5px 5px 10px black;
+      font-size: 40px;
+    }
+
+    .members input {
+      border-radius: 10px;
+    }
+
+    .members {
+      display: flex;
+      justify-content: center;
+    }
+
+    .nonveg {
+      display: none;
+    }
+
+    .box {
+      border: 5px solid black;
+      width: 30vmax;
+      position: absolute;
+      left: 450px;
+      top: 160px;
+      box-shadow: 5px 5px 15px black;
+      backdrop-filter: blur(15px);
+    }
+
+    .hun {
+      display: none;
+    }
+
+    .twohun {
+      display: none;
+    }
+
+    .threehun {
+      display: none;
+    }
+
+    .fourhun {
+      display: none;
+    }
+
+    .fivehun {
+      display: none;
+    }
+
+    .no button {
+      border: 3px solid black;
+      font-size: 20px;
+      font-weight: bolder;
+      color: green;
+      width: 80px;
+      box-shadow: 5px 5px 10px red;
+
+    }
+
+    .many button {
+
+      border: 3px solid black;
+      font-size: 20px;
+      font-weight: bolder;
+      color: green;
+      width: 80px;
+      box-shadow: 5px 5px 10px red;
+    }
+
+    .thrice button {
+
+      border: 3px solid black;
+      font-size: 20px;
+      font-weight: bolder;
+      color: green;
+      width: 80px;
+      box-shadow: 5px 5px 10px red;
+    }
+
+    .quad button {
+
+      border: 3px solid black;
+      font-size: 20px;
+      font-weight: bolder;
+      color: green;
+      width: 80px;
+      box-shadow: 5px 5px 10px red;
+    }
+
+    .pent button {
+
+      border: 3px solid black;
+      font-size: 20px;
+      font-weight: bolder;
+      color: green;
+      width: 80px;
+      box-shadow: 5px 5px 10px red;
+    }
+
+    .event select {
+      /* background-color: red; */
+      border: 3px solid black;
+      font-size: 15px;
+    }
+
+    .calculate button {
+      width: 160px;
+      /* background-color: aqua; */
+      height: 30px;
+      font-weight: bolder;
+      margin-left: 120px;
+    }
+
+    body {
+      background-image: url(background.png);
+      background-size: cover;
+
+    }
+
+    .choose {
+      font-weight: bolder;
+      font-size: 20px;
+    }
+
+    .event label {
+      font-weight: bolder;
+    }
+
+    .sel label {
+      font-weight: bolder;
+    }
+
+    .sel button {
+      width: 60px;
+    }
+
+    .tatt {
+      width: 60px;
+    }
+
+    .lab {
+      display: none;
+    }
+
+    .lab2 {
+      display: none;
+    }
+
+    .tatt2 {
+      width: 60px;
+    }
+
+    .lab3 {
+      display: none;
+    }
+
+    .tatt3 {
+      width: 60px;
+    }
+
+    .lab4 {
+      display: none;
+    }
+
+    .tatt4 {
+      width: 60px;
+    }
+
+    .lab5 {
+      display: none;
+    }
+
+    .tatt5 {
+      width: 60px;
+      ;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img width="100px" height="50px" src="event.png" alt="">
+    <li><a href="event.html">HOME</a></li>
+    <li> <a href="ABOUT.HTML">ABOUT</a></li>
+    <li><a href="events food planner.html">SIGN OUT</a></li>
+    
+  </div>
+  <br>
+  <!-- <div class="body">
+        <h1>EVENTS FOOD PLANNER</h1>
+    </div> -->
+  <div class="box">
+    <div class="choose">CHOOSE THE NO OF GUESTS BETWEEN</div>
+    <br>
+    <div class="no">
+      <button>50-100</button>
+
+      <div class="lab">
+        <br>
+        NOW ENTER ACCURATE NO OF GUESTS <br>
+        <br>
+        <label for="">ENTER</label>
+        <input type="text" value="50" class="tatt">
+      </div>
+    </div>
+    <br>
+    <div class="many"><button>101-200</button>
+      <div class="lab2">
+        <br>
+        NOW ENTER ACCURATE NO OF GUESTS <br>
+        <br>
+        <label for="">ENTER</label>
+        <input type="text" value="101" class="tatt2">
+      </div>
+    </div>
+    <br>
+    <div class="thrice"><button>201-300</button>
+      <div class="lab3">
+        <br>
+        NOW ENTER ACCURATE NO OF GUESTS <br>
+        <br>
+        <label for="">ENTER</label>
+        <input type="text" value="201" class="tatt3">
+      </div>
+    </div>
+    <br>
+    <div class="quad"><button>301-400</button>
+      <div class="lab4">
+        <br>
+        NOW ENTER ACCURATE NO OF GUESTS <br>
+        <br>
+        <label for="">ENTER</label>
+        <input type="text" value="301" class="tatt4">
+      </div>
+    </div>
+    <br>
+    <div class="pent"><button>401-500</button>
+      <div class="lab5">
+        <br>
+        NOW ENTER ACCURATE NO OF GUESTS <br>
+        <br>
+        <label for="">ENTER</label>
+        <input type="text" value="401" class="tatt5">
+      </div>
+    </div>
+    <br>
+    <div class="event">
+      <label>SELECT EVENT</label>
+      <select name="name"></select>
+    </div>
+    <br>
+    <div class="sel">
+      <label>NON VEG REQUIRED</label>
+      <button></button>
+    </div>
+    <div class="nonveg hide">
+      <input type="radio" class="radio1">Chicken tikka
+      <br>
+      <input type="radio" class="radio2">Tandoori Chicken
+      <br>
+      <input type="radio" class="radio3">Chicken Pizza
+      <br>
+      <input type="radio" class="radio4">Butter chicken
+      <br>
+      <input type="radio" class="radio5">Mutton kababs
+      <br>
+      <input type="radio" class="radio6">Mutton biryani
+      <br>
+      <input type="radio" class="radio7">Chicken biryani
+    </div>
+    <br>
+    <div class="calculate">
+      <button>CALCULATE</button>
+    </div>
+    <div class="hun">
+      <ul>
+        <li>Appetizers:</li>
+        <ul>
+          <li>Fruit platter - 10 large trays</li>
+          <li>Vegetable crudites with dip - 10 large trays</li>
+
+        </ul>
+        <li>Main Course:</li>
+        <ul>
+
+          <li>Beef lasagna - 10 trays (each serves 10)</li>
+          <li>Veggie stir-fry with tofu - 10 large trays</li>
+          <li>Garlic mashed potatoes - 20 lbs</li>
+          <li>Steamed vegetables - 20 lbs</li>
+        </ul>
+        <li>Side Dishes:</li>
+        <ul>
+          <li>Caesar salad - 10 large bowls</li>
+          <li>Quinoa pilaf - 10 lbs</li>
+          <li>Rolls and butter - 200 rolls</li>
+        </ul>
+        <li>Desserts:</li>
+        <ul>
+          <li>Chocolate cake - 10 cakes (each serves 10)</li>
+          <li>Fruit tartlets - 100 pieces</li>
+          <li>Ice cream - 10 gallons</li>
+        </ul>
+        <ul>
+
+
+          <li>Paneer Tikka - 10 kg</li>
+          <li>Tandoori Roti - 200 pieces</li>
+          <li>Naan - 150 pieces</li>
+          <li>Vegetable Pulao - 15 kg</li>
+          <li>Samosas - 200 pieces</li>
+          <li>Pakoras - 200 pieces</li>
+          <li>Sweets (Assorted) - 30 kg</li>
+          <li>Gulab Jamun - 200 pieces</li>
+          <li>Rasgulla - 150 pieces</li>
+          <li>Ice Cream - 50 litres</li>
+          <li>Fruit Salad - 20 kg</li>
+          <li>Coffee - 10 litres</li>
+          <li>Tea - 10 litres</li>
+        </ul>
+
+        <li>Drinks:</li>
+        <ul>
+          <li>Assorted soft drinks - 20 cases</li>
+          <li>Water - 10 gallons</li>
+          <li>Coffee and tea - enough for 100 servings</li>
+        </ul>
+      </ul>
+
+    </div>
+    <div class="twohun">
+      <ul>
+        <li>Appetizers:</li>
+        <ul>
+          <li>Fruit platter - 20 large trays</li>
+          <li>Vegetable crudites with dip - 20 large trays</li>
+          <li>Assorted cheese and crackers - 20 large platters</li>
+          <li>Mini quiches - 200 pieces</li>
+        </ul>
+        <li>Main Course:</li>
+        <ul>
+
+          <li>Beef lasagna - 20 trays (each serves 10)</li>
+          <li>Pasta primavera - 20 lbs</li>
+          <li>Garlic mashed potatoes - 40 lbs</li>
+          <li>Steamed vegetables - 40 lbs</li>
+        </ul>
+        <ul>
+          <li>Rice - 40 kg</li>
+
+          <li>Paneer Tikka - 20 kg</li>
+          <li>Tandoori Roti - 400 pieces</li>
+          <li>Naan - 300 pieces</li>
+          <li>Vegetable Pulao - 30 kg</li>
+          <li>Samosas - 400 pieces</li>
+          <li>Pakoras - 400 pieces</li>
+          <li>Dosa - 300 pieces</li>
+          <li>Idli - 400 pieces</li>
+          <li>Sweets (Assorted) - 60 kg</li>
+          <li>Gulab Jamun - 400 pieces</li>
+          <li>Rasgulla - 300 pieces</li>
+          <li>Ice Cream - 100 litres</li>
+          <li>Fruit Salad - 40 kg</li>
+          <li>Coffee - 20 litres</li>
+          <li>Tea - 20 litres</li>
+        </ul>
+
+        <li>Side Dishes:</li>
+        <ul>
+          <li>Caesar salad - 20 large bowls</li>
+          <li>Wild rice pilaf - 20 lbs</li>
+          <li>Assorted bread rolls - 300 rolls</li>
+        </ul>
+        <li>Desserts:</li>
+        <ul>
+          <li>Assorted mini pastries - 200 pieces</li>
+          <li>Chocolate fountain with fruit skewers - enough for 200 servings</li>
+          <li>Ice cream bar - assorted flavors, enough for 200 servings</li>
+        </ul>
+        <li>Drinks:</li>
+        <ul>
+          <li>Assorted soft drinks - 40 cases</li>
+          <li>Mineral water - 20 gallons</li>
+          <li>Coffee and tea - enough for 200 servings</li>
+        </ul>
+      </ul>
+
+    </div>
+    <div class="threehun">
+      <ul>
+        <li>Appetizers:
+          <ul>
+            <li>Finger Foods: 500-700 pieces</li>
+            <li>Dips and Chips: 10-15 pounds</li>
+          </ul>
+        </li>
+        <li>Main Course:
+          <ul>
+            <li>Vegetables: 30-40 pounds (raw weight)</li>
+            <li>Starch (rice, potatoes): 20-30 pounds (cooked weight)</li>
+            <li>Bread or Rolls: 200-300 pieces</li>
+          </ul>
+        </li>
+        <li>Salads:
+          <ul>
+            <li>Green Salad: 10-15 pounds (includes dressing)</li>
+            <li>Pasta or Grain Salad: 15-20 pounds</li>
+          </ul>
+        </li>
+        <li>Desserts:
+          <ul>
+            <li>Cakes or Pastries: 150-200 pieces (various types)</li>
+            <li>Fruit Platter: 30-40 pounds</li>
+            <li>Cookies: 300-400 pieces</li>
+          </ul>
+        </li>
+        <ul>
+          <li>Rice - 60 kg</li>
+
+          <li>Paneer Tikka - 30 kg</li>
+          <li>Tandoori Roti - 600 pieces</li>
+          <li>Naan - 450 pieces</li>
+          <li>Vegetable Pulao - 45 kg</li>
+          <li>Samosas - 600 pieces</li>
+          <li>Pakoras - 600 pieces</li>
+          <li>Dosa - 450 pieces</li>
+          <li>Idli - 600 pieces</li>
+          <li>Sweets (Assorted) - 90 kg</li>
+          <li>Gulab Jamun - 600 pieces</li>
+          <li>Rasgulla - 450 pieces</li>
+          <li>Ice Cream - 150 litres</li>
+          <li>Fruit Salad - 60 kg</li>
+          <li>Coffee - 30 litres</li>
+          <li>Tea - 30 litres</li>
+        </ul>
+
+        <li>Beverages:
+          <ul>
+            <li>Water: 30-40 gallons</li>
+            <li>Soft Drinks: 10-15 cases (cans or bottles)</li>
+            <li>Juices: 5-10 gallons (various types)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="fourhun">
+      <ul>
+        <li>Appetizers:
+          <ul>
+            <li>Finger Foods: 800-1000 pieces</li>
+            <li>Dips and Chips: 15-20 pounds</li>
+          </ul>
+        </li>
+        <li>Main Course:
+          <ul>
+            <li>Vegetables: 40-50 pounds (raw weight)</li>
+            <li>Starch (rice, potatoes): 30-40 pounds (cooked weight)</li>
+            <li>Bread or Rolls: 300-400 pieces</li>
+          </ul>
+        </li>
+        <ul>
+          <li>Paneer Tikka - 40 kg</li>
+          <li>Tandoori Roti - 800 pieces</li>
+          <li>Naan - 600 pieces</li>
+          <li>Vegetable Pulao - 60 kg</li>
+          <li>Samosas - 800 pieces</li>
+          <li>Pakoras - 800 pieces</li>
+          <li>Dosa - 600 pieces</li>
+          <li>Idli - 800 pieces</li>
+          <li>Sweets (Assorted) - 120 kg</li>
+          <li>Gulab Jamun - 800 pieces</li>
+          <li>Rasgulla - 600 pieces</li>
+          <li>Ice Cream - 200 litres</li>
+          <li>Fruit Salad - 80 kg</li>
+          <li>Coffee - 40 litres</li>
+          <li>Tea - 40 litres</li>
+        </ul>
+
+        <li>Salads:
+          <ul>
+            <li>Green Salad: 15-20 pounds (includes dressing)</li>
+            <li>Pasta or Grain Salad: 20-25 pounds</li>
+          </ul>
+        </li>
+        <li>Desserts:
+          <ul>
+            <li>Cakes or Pastries: 200-250 pieces (various types)</li>
+            <li>Fruit Platter: 40-50 pounds</li>
+            <li>Cookies: 400-500 pieces</li>
+          </ul>
+        </li>
+        <li>Beverages:
+          <ul>
+            <li>Water: 40-50 gallons</li>
+            <li>Soft Drinks: 15-20 cases (cans or bottles)</li>
+            <li>Juices: 10-15 gallons (various types)</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+    <div class="fivehun">
+      <ul>
+        <li>Appetizers:
+          <ul>
+            <li>Finger Foods:1000-1200 pieces</li>
+            <li>Dips and Chips: 20-25 pounds</li>
+          </ul>
+        </li>
+        <li>Main Course:
+          <ul>
+
+            <li>Vegetables: 50-60 pounds (raw weight)</li>
+            <li>Starch (rice, potatoes): 40-50 pounds (cooked weight)</li>
+            <li>Bread or Rolls: 400-500 pieces</li>
+          </ul>
+        </li>
+        <ul>
+          <li>Butter Chicken - 75 kg</li>
+          <li>Paneer Tikka - 50 kg</li>
+          <li>Tandoori Roti - 1000 pieces</li>
+          <li>Naan - 750 pieces</li>
+          <li>Vegetable Pulao - 75 kg</li>
+          <li>Samosas - 1000 pieces</li>
+          <li>Pakoras - 1000 pieces</li>
+          <li>Sweets (Assorted) - 150 kg</li>
+          <li>Gulab Jamun - 1000 pieces</li>
+          <li>Rasgulla - 750 pieces</li>
+          <li>Ice Cream - 250 litres</li>
+          <li>Fruit Salad - 100 kg</li>
+          <li>Coffee - 50 litres</li>
+          <li>Tea - 50 litres</li>
+        </ul>
+        <li>Salads:
+          <ul>
+            <li>Green Salad: 20-25 pounds (includes dressing)</li>
+            <li>Pasta or Grain Salad: 25-30 pounds</li>
+          </ul>
+        </li>
+        <li>Desserts:
+          <ul>
+            <li>Cakes or Pastries: 250-300 pieces (various types)</li>
+            <li>Fruit Platter: 50-60 pounds</li>
+            <li>Cookies: 500-600 pieces</li>
+          </ul>
+        </li>
+        <li>Beverages:
+          <ul>
+            <li>Water: 50-60 gallons</li>
+            <li>Soft Drinks: 20-25 cases (cans or bottles)</li>
+            <li>Juices: 15-20 gallons (various types)</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <script src="veg.js"></script>
+  <script src="event.js"></script>
+</body>
+</html>
