@@ -1,0 +1,43 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node *next;
+};
+struct node *reverse(struct node *start){
+    struct node *previous=NULL,*current,*next;
+    current=start;
+    while(current!=NULL){
+        next=current->next;
+        current->next=previous;
+        previous=current;
+        current=next;
+    }
+    return previous;
+}
+void trans(struct node *p){
+    while(p!=NULL){
+        printf("%d\n",p->data);
+        p=p->next;
+    }
+}
+int main() {
+    struct node *a=NULL,*b=NULL,*c=NULL,*head,*d=NULL;
+    a=(struct node*)malloc(sizeof(struct node));
+    b=(struct node*)malloc(sizeof(struct node));
+    c=(struct node*)malloc(sizeof(struct node));
+    d=(struct node*)malloc(sizeof(struct node));
+    a->data=40;
+    b->data=30;
+    c->data=20;
+    d->data=10;
+    a->next=b;
+    b->next=c;
+    c->next=d;
+    d->next=NULL;
+    head=a;
+    head=reverse(head);
+    trans(head);
+    return 0;
+}
