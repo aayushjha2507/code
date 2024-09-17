@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+class student{
+    protected:
+  int rollno;
+  public:
+  void setrollno(int r){
+      rollno=r;
+  }
+  void getrollno(){
+      cout<<"THE ROLL NO IS:"<<rollno<<endl;
+  }
+};
+class exam:private student{
+    protected:
+    int maths,physics;
+    public:
+    void setmarks(int m1,int m2){
+        setrollno(10);
+        maths=m1;
+        physics=m2;
+    }
+    void getmarks(){
+        getrollno();
+        cout<<"the maths marks is:"<<maths<<endl;
+        cout<<"the physics marks is:"<<physics<<endl;
+    }
+};
+class results:private exam{
+    int percentage;
+    public:
+    void getresults(){
+        setmarks(20,30);
+        getmarks();
+        cout<<"THE PERCENTAGE IS:"<<(maths+physics)/2;
+    }
+};
+int main(){
+    results r1;
+    r1.getresults();
+}
