@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+class base1{
+    // protected:
+    int num1;
+    public:
+    base1(int n){
+        num1=n;
+    }
+    void get1(){
+        cout<<"the data is"<<num1<<endl;
+    }
+};
+class base2{
+    // protected:
+    int num2;
+    public:
+    base2(int n){
+        num2=n;
+    }
+    void get2(){
+        cout<<"the data2 is:"<<num2<<endl;
+    }
+};
+class derived:public base1,public base2{
+    int num3;
+    public:
+    derived(int a,int b,int c):base1(b),base2(b){
+        num3=c;
+}
+void getall(){
+    // cout<<"the data1 is:"<<num1<<endl;
+    // cout<<"the data 2 is:"<<num2<<endl;
+    cout<<"the data 3 is:"<<num3<<endl;
+}
+};
+int main(){
+    derived d(10,20,30);
+    d.get1();
+    
+}
