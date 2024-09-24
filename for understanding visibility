@@ -1,0 +1,49 @@
+class abc{
+    protected:
+    int a;
+    public:
+    void set(int x){
+        a=x;
+    }
+    void get(){
+        cout<<a<<endl;
+    }
+};
+class der:public abc{
+    public:
+    void get(){
+       cout<<a<<endl;
+    }
+};
+int main() {
+   der d;
+   d.set(10);
+d.get();
+    return 0;
+}
+
+now inherit abc protected
+// Online C++ compiler to run C++ program online
+class abc{
+    protected:
+    int a;
+    public:
+    void set(int x){
+        a=x;
+    }
+    void get(){
+        cout<<a<<endl;
+    }
+};
+class der:protected abc{
+    public:
+    void get1(){
+        set(10);
+      get();
+    }
+};
+int main() {
+   der d;
+   d.get1();
+    return 0;
+}
