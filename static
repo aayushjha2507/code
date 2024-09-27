@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class hello{
+    int a;
+    static int count;
+    public:
+    void setdata(int x){
+        a=x;
+        count++;
+    }
+    void getdata(void){
+        cout<<a<<endl;
+    }
+    static void getcount(void){
+        cout<<count<<endl;
+    }
+};
+int hello::count;
+int main(){
+    hello h1,h2,h3;
+    h1.setdata(10);
+    h1.getdata();
+    hello::getcount();
+    h2.setdata(20);
+    h2.getdata();
+    hello::getcount();
+    h3.setdata(10);
+    h3.getdata();
+    hello::getcount();
+}
