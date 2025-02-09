@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">lowercase</label>
+    <input type="checkbox" id="lowercase" checked>
+    <div></div>
+    <label for="">uppercase</label>
+    <input type="checkbox" id="uppercase" checked>
+    <div></div>
+    <label for="">numbers</label>
+    <input type="checkbox" id="numbers" checked>
+    <div></div>
+    <button class="pass">Genratepass</button>
+</body>
+<script>
+    let a1 = document.getElementById("lowercase")
+    let a2 = document.getElementById("uppercase")
+    let a3 = document.getElementById("numbers")
+    let a4 = document.querySelector(".pass")
+    let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let lower = "abcdefghijklmnopqrstuvwxyz"
+    let num = "1234567890"
+    let allchars = ""
+    let pass = ""
+    a4.addEventListener("click", () => {
+        if (!a1.checked) {
+            // console.log("a1 not checked")
+            lower = ""
+            allchars += lower
+        }
+        else if (a1.checked) {
+            // console.log("a1  checked")
+            allchars += lower
+        }
+        if (!a2.checked) {
+            // console.log("a2 not checked")
+            upper = ""
+            allchars += upper
+        }
+        else if (a2.checked) {
+            // console.log("a2  checked")
+            allchars += upper
+        }
+        if (!a3.checked) {
+            // console.log("a3 not checked")
+            num = ""
+            allchars += num
+        }
+        else if (a3.checked) {
+            // console.log("a3 checked")
+            allchars += num
+        }
+        let i = 1
+        while (i <= 4) {
+            pass += allchars.charAt(Math.floor(Math.random() * allchars.length))
+            i++
+        }
+        console.log(pass)
+        pass = ""
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+         height: 20vh;
+         width: 20vmin; 
+         margin: 3px;  
+         /* border: 2px solid black; */
+        }
+        .calculator{
+            display: flex;
+            flex-wrap: wrap;
+            height: 20vh;
+            width: 90vmin;
+        }
+        .input{
+            height: 10vmin;
+            width: 20vmax;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <input type="text">
+    </div>
+    <div class="calculator">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>*</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <button>C</button>
+        <button>0</button>
+        <button>.</button>
+        <button>=</button>
+    </div>
+</body>
+<script>
+    let a=document.querySelector("input")
+    let b=document.querySelectorAll("button")
+    a.value=""
+    let x
+    b.forEach((e)=>{
+       e.addEventListener("click",()=>{
+        if(e.innerText!="="&&e.innerText!="C"){
+       a.value+=e.innerText
+        }
+else if(e.innerText=="="){
+    a.value=eval(a.value)
+    }
+    else{
+        location.reload()
+    }
+       })})
+</script>
+</html>
